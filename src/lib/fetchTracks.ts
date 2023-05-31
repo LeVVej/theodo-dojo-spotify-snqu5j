@@ -1,4 +1,4 @@
-const apiToken: string = 'BQBlMZnJwxGEWR_nXLG1Gp4k_8Jud583ZnjZeR9aedjOnxMvAtd1948nZMNgRFiKtZmtcZuXqSqkiylUQ_0zE9fPpf-dDZBiLJAtIgex0iqrEUiTzZgoeIk3S2aVq-W3ZQyGaxJ6Z-qY1nTeiP_vqokZaaYqJGHl6dpvBk6W0GGqsZA0gk9d1sef00SfakIbqbRoVztpdO5rSt-ezGozb6caTLk';
+const apiToken: string = 'BQBkjhAsbEb7KOncqvEytP1PbIMlaRYsOd0ASWGcJWpdMVjNUcGSByhHFYqmA4M7t_3a2XIjjbfEUk0rW1phr9jQqha1P9VCoLiD4zJbakeMOofXcsvyInM30DTFmdz6Fgd8y39qgnmDuhMgPnoqBxniLklJdv6U-9qbNzbX2q9UOYKvh0zU4Du8qEJj97Bso855BEUAUz18aLT3rxH6Vg';
 
 export const fetchTracks = async () => {
   const response = await fetch('https://api.spotify.com/v1/me/tracks', {
