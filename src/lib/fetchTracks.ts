@@ -1,6 +1,8 @@
+import { SavedTrack, SpotifyType } from "spotify-types";
+
 const apiToken: string = 'BQBkjhAsbEb7KOncqvEytP1PbIMlaRYsOd0ASWGcJWpdMVjNUcGSByhHFYqmA4M7t_3a2XIjjbfEUk0rW1phr9jQqha1P9VCoLiD4zJbakeMOofXcsvyInM30DTFmdz6Fgd8y39qgnmDuhMgPnoqBxniLklJdv6U-9qbNzbX2q9UOYKvh0zU4Du8qEJj97Bso855BEUAUz18aLT3rxH6Vg';
 
-export const fetchTracks = async () => {
+export const fetchTracks = async () :Promise<SavedTrack> => {
   const response = await fetch('https://api.spotify.com/v1/me/tracks', {
     method: 'GET',
     headers: {
@@ -10,7 +12,7 @@ export const fetchTracks = async () => {
   if (!response.ok) {
      throw new Error(`Fetching tracks failed with status ${response.status}`)
    }
-  const data = await response.json() as { items: unknown[] };
+  const data = await response.json();
 
   return data.items;
 };

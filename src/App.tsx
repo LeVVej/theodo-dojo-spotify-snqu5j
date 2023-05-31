@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { fetchTracks } from './lib/fetchTracks';
+import { SavedTrack } from 'spotify-types';
 
 
 const App = () => {
