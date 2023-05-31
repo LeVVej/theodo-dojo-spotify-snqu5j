@@ -14,5 +14,5 @@ export const fetchTracks = async () :Promise<SavedTrack> => {
    }
   const data = await response.json();
 
-  return data.items;
+  return data.items.filter(item => item.track.preview_url!==null);
 };
