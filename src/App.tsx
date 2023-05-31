@@ -38,7 +38,7 @@ const App = () => {
       <div>
         <p>Morceau actuel : </p>
       </div>
-      {tracks && <audio src={tracks[trackIndex]} autoPlay controls />}
+      {tracks && <audio src={tracks[trackIndex]?.track.href} autoPlay controls />}
       <button onClick={goToNextTrack}>
         Next track
       </button>
