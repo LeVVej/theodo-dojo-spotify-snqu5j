@@ -36,7 +36,7 @@ const App = () => {
         <p>Nombre de morceaux : {tracks && tracks.length} </p>
       </div>
       <div>
-        <p>Morceau actuel : </p>
+        <p>Morceau actuel : {tracks && tracks[trackIndex]?.track.name}</p>
       </div>
       {tracks && <audio src={tracks[trackIndex]?.track.href} autoPlay controls />}
       <button onClick={goToNextTrack}>
