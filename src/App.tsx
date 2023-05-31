@@ -23,7 +23,7 @@ const App = () => {
 		queryFn: fetchTracks
   });
   const AlbumCover = () =>  {
-    const src = "https://example.com/image.png"; // A changer ;)
+    const src = tracks[trackIndex]?.track.album.images[0]?.url; 
     return (
         <img src={src} style={{ width: 400, height: 400 }} />
     );
@@ -39,6 +39,7 @@ const App = () => {
         <h1 className="App-title">Bienvenue sur le blind test</h1>
       </header>
       <div className="App-images">
+        <AlbumCover track={tracks && tracks[trackIndex]?.track} />
         <p>Nombre de morceaux : {tracks && tracks.length} </p>
       </div>
       <div>
