@@ -31,7 +31,7 @@ const App = () => {
         <h1 className="App-title">Bienvenue sur le blind test</h1>
       </header>
       <div className="App-images">
-        <p>Donc là je peux changer ce que je veux normalement.</p>
+        <p>Nombre de morceaux : {tracks && tracks.length} </p>
       </div>
       <audio src={trackUrls[trackIndex]} autoPlay controls />
       <button onClick={goToNextTrack}>
