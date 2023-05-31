@@ -18,11 +18,12 @@ const App = () => {
   const goToNextTrack = () => {
     setTrackIndex(trackIndex + 1);
   }
-  const { data: tracks } = useQuery({
+  const { data: tracks } :{data: SavedTrack[] | undefined} = useQuery({
 		queryKey: ['tracks'],
 		queryFn: fetchTracks
   });
   console.log(tracks)
+  console.log(tracks && tracks[trackIndex])
 
   
   return (
@@ -34,7 +35,10 @@ const App = () => {
       <div className="App-images">
         <p>Nombre de morceaux : {tracks && tracks.length} </p>
       </div>
-      <audio src={trackUrls[trackIndex]} autoPlay controls />
+      <div>
+        <p>Morceau actuel : </p>
+      </div>
+      {tracks && <audio src={tracks[trackIndex]} autoPlay controls />}
       <button onClick={goToNextTrack}>
         Next track
       </button>
